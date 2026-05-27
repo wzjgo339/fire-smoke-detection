@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environment & Conda
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Dataset (large - 21k+ images)
+train/
+test/
+test_smoke_videos.zip
+samples/input/pos/
+samples/input/neg/
+
+# Training runs & model weights
+runs/
+*.pt
+*.onnx
+*.engine
+
+# Data lists (local absolute paths)
+data/
+
+# Output results (regenerated on demand)
+metrics.json
+samples/output/**/*.avi
+samples/output/**/*.mp4
+
+# Planning/documentation
+prompt.md
+
+# OS
+Thumbs.db
+.DS_Store

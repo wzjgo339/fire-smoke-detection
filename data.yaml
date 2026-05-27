@@ -1,0 +1,11 @@
+# D-Fire Dataset configuration for YOLO
+path: E:\火灾识别
+
+train: data/train.txt
+val: data/val.txt
+test: test/images
+
+nc: 2
+names:
+  0: smoke
+  1: fire

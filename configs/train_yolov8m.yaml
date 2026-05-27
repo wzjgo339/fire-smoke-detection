@@ -1,0 +1,49 @@
+# YOLOv8m training hyperparameters for fire & smoke detection
+# Optimized for RTX 5060 Ti (16 GB VRAM)
+
+model: yolov8m.pt
+task: detect
+
+# Data
+data: E:\火灾识别\data.yaml
+
+# Training
+epochs: 100
+patience: 30
+batch: 38
+imgsz: 640
+workers: 2
+device: 0
+seed: 42
+
+# Optimizer (SGD per senior-computer-vision skill)
+optimizer: SGD
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# EMA
+close_mosaic: 10
+
+# Loss weights
+box: 7.5
+cls: 0.5
+dfl: 1.5
+
+# Augmentations
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+translate: 0.1
+scale: 0.5
+fliplr: 0.5
+mosaic: 1.0
+
+# Precision
+cache: disk
+
+amp: True

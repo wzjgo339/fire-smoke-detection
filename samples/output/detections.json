@@ -1,0 +1,277 @@
+[
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF06723.jpg",
+    "detections": [],
+    "count": 0
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF06724.jpg",
+    "detections": [],
+    "count": 0
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF06725.jpg",
+    "detections": [],
+    "count": 0
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF06726.jpg",
+    "detections": [],
+    "count": 0
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF06727.jpg",
+    "detections": [],
+    "count": 0
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF06978.jpg",
+    "detections": [
+      {
+        "bbox": [
+          1176.5,
+          89.4,
+          1271.5,
+          168.6
+        ],
+        "class": "smoke",
+        "class_id": 0,
+        "confidence": 0.5601
+      }
+    ],
+    "count": 1
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF07377.jpg",
+    "detections": [],
+    "count": 0
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF07618.jpg",
+    "detections": [
+      {
+        "bbox": [
+          406.4,
+          273.0,
+          444.6,
+          303.0
+        ],
+        "class": "smoke",
+        "class_id": 0,
+        "confidence": 0.7217
+      }
+    ],
+    "count": 1
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF07673.jpg",
+    "detections": [
+      {
+        "bbox": [
+          443.4,
+          242.0,
+          488.6,
+          275.0
+        ],
+        "class": "smoke",
+        "class_id": 0,
+        "confidence": 0.4341
+      }
+    ],
+    "count": 1
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF07718.jpg",
+    "detections": [
+      {
+        "bbox": [
+          872.2,
+          435.8,
+          1033.8,
+          508.2
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.8784
+      },
+      {
+        "bbox": [
+          382.5,
+          88.9,
+          924.5,
+          404.1
+        ],
+        "class": "smoke",
+        "class_id": 0,
+        "confidence": 0.8726
+      },
+      {
+        "bbox": [
+          683.2,
+          175.9,
+          748.8,
+          251.1
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.8164
+      },
+      {
+        "bbox": [
+          613.2,
+          319.0,
+          742.8,
+          376.0
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.728
+      },
+      {
+        "bbox": [
+          559.2,
+          407.0,
+          604.8,
+          469.0
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.5312
+      },
+      {
+        "bbox": [
+          506.9,
+          348.2,
+          556.1,
+          397.8
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.4922
+      },
+      {
+        "bbox": [
+          560.5,
+          294.8,
+          615.5,
+          339.2
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.4495
+      }
+    ],
+    "count": 7
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF07719.jpg",
+    "detections": [
+      {
+        "bbox": [
+          874.8,
+          438.5,
+          1035.2,
+          507.5
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.8823
+      },
+      {
+        "bbox": [
+          383.0,
+          92.0,
+          917.0,
+          404.0
+        ],
+        "class": "smoke",
+        "class_id": 0,
+        "confidence": 0.8701
+      },
+      {
+        "bbox": [
+          679.2,
+          173.6,
+          746.8,
+          250.4
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.8066
+      },
+      {
+        "bbox": [
+          635.0,
+          309.0,
+          743.0,
+          371.0
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.7446
+      },
+      {
+        "bbox": [
+          559.5,
+          402.8,
+          606.5,
+          469.2
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.585
+      }
+    ],
+    "count": 5
+  },
+  {
+    "image": "E:\\火灾识别\\samples\\input\\AoF07720.jpg",
+    "detections": [
+      {
+        "bbox": [
+          322.2,
+          28.5,
+          869.8,
+          401.0
+        ],
+        "class": "smoke",
+        "class_id": 0,
+        "confidence": 0.8999
+      },
+      {
+        "bbox": [
+          484.9,
+          287.2,
+          729.1,
+          478.8
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.8599
+      },
+      {
+        "bbox": [
+          1021.8,
+          438.2,
+          1074.2,
+          491.8
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.7231
+      },
+      {
+        "bbox": [
+          841.0,
+          471.5,
+          873.0,
+          503.5
+        ],
+        "class": "fire",
+        "class_id": 1,
+        "confidence": 0.5679
+      }
+    ],
+    "count": 4
+  }
+]
