@@ -13,7 +13,8 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
-ROOT = Path(r"E:\火灾识别")
+# Project root = this script's directory; keeps the project portable.
+ROOT = Path(__file__).resolve().parent
 TRAIN_IMAGES = ROOT / "train" / "images"
 TRAIN_LABELS = ROOT / "train" / "labels"
 OUTPUT_DIR = ROOT / "data"
@@ -32,10 +33,11 @@ def classify_image(label_path: Path) -> str:
                 if not line:
                     continue
                 cls = line.split()[0]
+                # Category mapping (D-Fire ground truth): class 0 = smoke, class 1 = fire
                 if cls == "0":
-                    has_fire = True
-                elif cls == "1":
                     has_smoke = True
+                elif cls == "1":
+                    has_fire = True
     except Exception:
         logger.warning("Failed to read %s", label_path)
         return "empty"
@@ -59,7 +61,9 @@ def main():
             group = classify_image(label_path)
         else:
             group = "empty"
-        groups[group].append(str(img_path.resolve()))
+        # Store a path relative to the project root so the data lists are portable
+        # and resolve correctly against data.yaml's `path:` (set to `.`).
+        groups[group].append(str(img_path.relative_to(ROOT)))
 
     train_paths: list[str] = []
     val_paths: list[str] = []

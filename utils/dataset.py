@@ -21,10 +21,11 @@ def count_instances(labels_dir: Path) -> dict[str, int]:
                         continue
                     has_content = True
                     cls = line.split()[0]
+                    # Category mapping (D-Fire ground truth): class 0 = smoke, class 1 = fire
                     if cls == "0":
-                        stats["fire"] += 1
-                    elif cls == "1":
                         stats["smoke"] += 1
+                    elif cls == "1":
+                        stats["fire"] += 1
         except Exception:
             logger.warning("Failed to read %s", label_file)
         if not has_content:

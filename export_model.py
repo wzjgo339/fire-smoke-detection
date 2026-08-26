@@ -18,7 +18,8 @@ def parse_args():
     parser.add_argument("--format", default="onnx", choices=["onnx", "engine", "tflite", "openvino", "all"],
                         help="Export format")
     parser.add_argument("--imgsz", type=int, default=640, help="Image size")
-    parser.add_argument("--half", action="store_true", default=True, help="FP16 precision")
+    parser.add_argument("--half", action=argparse.BooleanOptionalAction, default=True,
+                        help="FP16 precision (default on; use --no-half for FP32)")
     parser.add_argument("--dynamic", action="store_true", help="Dynamic batch size (ONNX/TensorRT)")
     parser.add_argument("--workspace", type=int, default=8, help="TensorRT workspace GB")
     parser.add_argument("--simplify", action="store_true", default=True, help="Simplify ONNX model")

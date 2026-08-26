@@ -1,0 +1,4 @@
+aiosqlite>=0.20.0
+aiofiles>=24.1.0
+pynvml>=11.5.0
+pydantic-settings>=2.3.0

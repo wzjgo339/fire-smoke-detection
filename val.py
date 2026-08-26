@@ -10,7 +10,8 @@ from ultralytics import YOLO
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
-ROOT = Path(r"E:\火灾识别")
+# Project root = this script's directory; keeps the project portable.
+ROOT = Path(__file__).resolve().parent
 
 
 def parse_args():
@@ -36,7 +37,8 @@ def main():
     logger.info("Loading model: %s", model_path)
     model = YOLO(str(model_path))
 
-    # Override model's embedded class names (trained with wrong mapping)
+    # Guard: ensure class-name mapping is consistent with data.yaml (0=smoke, 1=fire).
+    # Harmless no-op when the checkpoint already baked these names.
     model.model.names = {0: "smoke", 1: "fire"}
 
     data_path = args.data

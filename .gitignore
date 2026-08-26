@@ -6,6 +6,9 @@ __pycache__/
 dist/
 build/
 
+# Runtime SQLite database (regenerated on demand)
+*.db
+
 # Virtual environment & Conda
 .env
 .venv/
@@ -35,6 +38,9 @@ data/
 metrics.json
 samples/output/**/*.avi
 samples/output/**/*.mp4
+backend/uploads/
+*_annotated.jpg
+*_thumb.jpg
 
 # Planning/documentation
 prompt.md

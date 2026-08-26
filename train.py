@@ -11,7 +11,8 @@ from ultralytics import YOLO
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
-ROOT = Path(r"E:\火灾识别")
+# Project root = this script's directory; keeps the project portable.
+ROOT = Path(__file__).resolve().parent
 
 
 def parse_args():
@@ -66,7 +67,9 @@ def build_train_kwargs(cfg: dict, args) -> dict:
         "amp": cfg.get("amp", True),
         "cache": cfg.get("cache", False),
         "resume": args.resume,
-        "project": "runs/detect",
+        # Absolute project path avoids ultralytics re-prefixing with the default
+        # RUNS_DIR/task, which produced the duplicate "runs/detect/runs/detect" tree.
+        "project": str(ROOT / "runs" / "detect"),
     }
     if args.name:
         kwargs["name"] = args.name

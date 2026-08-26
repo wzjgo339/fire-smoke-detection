@@ -1,5 +1,6 @@
 # D-Fire Dataset configuration for YOLO
-path: E:\火灾识别
+# `path` is relative to the current working directory; run scripts from the project root.
+path: .
 
 train: data/train.txt
 val: data/val.txt

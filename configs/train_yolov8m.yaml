@@ -5,7 +5,7 @@ model: yolov8m.pt
 task: detect
 
 # Data
-data: E:\火灾识别\data.yaml
+data: data.yaml
 
 # Training
 epochs: 100

@@ -19,7 +19,8 @@ from utils.visualization import draw_detections, save_result_image
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
-ROOT = Path(r"E:\火灾识别")
+# Project root = this script's directory; keeps the project portable.
+ROOT = Path(__file__).resolve().parent
 CLASS_NAMES = {0: "smoke", 1: "fire"}
 
 
@@ -36,7 +37,10 @@ def parse_args():
     parser.add_argument("--show", action="store_true", help="Display results in window")
     parser.add_argument("--save-json", action="store_true", help="Save detection results as JSON")
     parser.add_argument("--nosave-img", action="store_true", help="Skip saving annotated images")
-    parser.add_argument("--half", action="store_true", default=True, help="FP16 inference")
+    parser.add_argument(
+        "--half", action=argparse.BooleanOptionalAction, default=True,
+        help="FP16 inference (default on; use --no-half for FP32)",
+    )
     return parser.parse_args()
 
 
